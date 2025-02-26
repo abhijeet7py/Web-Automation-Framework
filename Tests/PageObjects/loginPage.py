@@ -55,7 +55,7 @@ class LoginPage:
         self.get_submit_button().click()
 
     def get_error_msg_text(self):
-        return self.get_error_msg_text().text
+        return self.get_error_msg().text
 
     # def click_free_trial(self):
     #     return self.get_free_trail().click()

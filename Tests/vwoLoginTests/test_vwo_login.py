@@ -22,7 +22,7 @@ def test_vwo_login_negative(setup):
     driver = setup
     loginpage = LoginPage(driver)
     loginpage.login_to_vwo(usr="admin@gmail.com",pwd="admin@123")
-    time.sleep(5)
+    time.sleep(10)
     error_message = loginpage.get_error_msg_text()
     assert error_message == "Your email, password, IP address or location did not match"
 
@@ -34,7 +34,7 @@ def test_vwo_login_positive(setup):
     driver = setup
     loginpage = LoginPage(driver)
     loginpage.login_to_vwo(usr="abhijeet123@gmail.com",pwd="Abhijeet@0709")
-    time.sleep(5)
+    time.sleep(10)
     dashboard = DashboardPage(driver)
     assert "Dashboard" in driver.title
     assert "a" in dashboard.user_loggeedin_text()
